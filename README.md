@@ -34,7 +34,7 @@ const blazeverify = require('blazeverify')('live_...')
 
 ```javascript
 // verify an email address
-blazeverify.verify('jarrett@blazeverify.com').then((response) => {
+blazeverify.verify('jarrett@blazeverify.com').then(response => {
   console.log(response);
 });
 ```
@@ -60,14 +60,14 @@ allocation within a 5 minute window.
 
 ```javascript
 emails = ['jarrett@blazeverify.com', 'support@blazeverify.com', ...]
-blazeverify.batches.create(emails).then((id) => {
+blazeverify.batches.create(emails).then(id => {
   // batch id
   console.log(id);
 });
 
 // you can optionally pass in a callback url that we'll POST to when the
 // batch is complete.
-blazeverify.batches.create(emails, 'https://blazeverify.com/'}).then((id) => {
+blazeverify.batches.create(emails, 'https://blazeverify.com/'}).then(id => {
   console.log(id);
 });
 ```
@@ -78,7 +78,7 @@ Calling `status` on a batch will return the status. It will contain the results 
 
 ```javascript
 id = '5cfcbfdeede34200693c4319'
-blazeverify.batches.status(id).then((response) => {
+blazeverify.batches.status(id).then(response => {
   console.log(response);
 });
 ```
