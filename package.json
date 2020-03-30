@@ -1,6 +1,6 @@
 {
   "name": "blazeverify",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Email Verification that’s astonishingly easy and low-cost. See https://blazeverify.com for details.",
   "main": "lib/blazeverify.js",
   "scripts": {
