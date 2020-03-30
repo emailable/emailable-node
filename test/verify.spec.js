@@ -5,13 +5,6 @@ const blazeverify = require('../lib/blazeverify')('test_7aff7fc0142c65f86a00')
 
 describe('blazeverify.verify()', () => {
 
-  it('should return a 401 status code when an invalid API key', (done) => {
-    require('../lib/blazeverify')().verify('').catch((error) => {
-      expect(error.code).to.be.equal(401);
-      done();
-    });
-  });
-
   it('should verify an email', (done) => {
     blazeverify.verify('deliverable@example.com').then((response) => {
       expect(response.domain).to.not.be.a('null');

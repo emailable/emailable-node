@@ -13,4 +13,11 @@ describe('blazeverify.account()', function () {
 		});
 	});
 
+	it('should return a 401 status code when an invalid API key', (done) => {
+		require('../lib/blazeverify')().account().catch((error) => {
+			expect(error.code).to.be.equal(401);
+			done();
+		});
+	});
+
 });
