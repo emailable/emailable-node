@@ -11,7 +11,7 @@ See the [Node API docs](https://blazeverify.com/docs/api#node).
 
 ## Installation
 
-Add this line to your application's Gemfile:
+Install the package with:
 
 ```sh
 npm install blazeverify --save
