@@ -1,10 +1,10 @@
 # Blaze Verify Node Library
 
 
-[![Version](https://img.shields.io/npm/v/blazeverufy.svg)](https://www.npmjs.org/package/blazeverufy)
+[![Version](https://img.shields.io/npm/v/blazeverify.svg)](https://www.npmjs.org/package/blazeverify)
 [![Build Status](https://travis-ci.com/blazeverify/blazeverify-node.svg)](https://travis-ci.com/blazeverify/blazeverify-node)
 [![Maintainability](https://api.codeclimate.com/v1/badges/2d74c69a9155109058a7/maintainability)](https://codeclimate.com/github/blazeverify/blazeverify-node/maintainability)
-[![Downloads](https://img.shields.io/npm/dm/blazeverufy.svg)](https://www.npmjs.com/package/blazeverufy)
+[![Downloads](https://img.shields.io/npm/dm/blazeverify.svg)](https://www.npmjs.com/package/blazeverify)
 [![Try on RunKit](https://badge.runkitcdn.com/blazeverify.svg)](https://runkit.com/npm/blazeverify)
 
 This is the official node wrapper for the Blaze Verify API.
