@@ -1,10 +1,10 @@
 {
   "name": "blazeverify",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Email Verification that’s astonishingly easy and low-cost. See https://blazeverify.com for details.",
   "main": "lib/blazeverify.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha --timeout 10000"
   },
   "repository": {
     "type": "git",

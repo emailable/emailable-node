@@ -31,14 +31,14 @@ The library needs to be configured with your account's API key which is availabl
 
 ```javascript
 // set api key
-const blazeverify = require('blazeverify')('live_...')
+var blazeverify = require('blazeverify')('live_...')
 ```
 
 ### Verification
 
 ```javascript
 // verify an email address
-blazeverify.verify('jarrett@blazeverify.com').then(response => {
+blazeverify.verify('jarrett@blazeverify.com').then(function (response) {
   console.log(response);
 });
 ```
@@ -63,16 +63,15 @@ allocation within a 5 minute window.
 #### Start a batch
 
 ```javascript
-emails = ['jarrett@blazeverify.com', 'support@blazeverify.com', ...]
-blazeverify.batches.create(emails).then(id => {
-  // batch id
-  console.log(id);
+var emails = ['jarrett@blazeverify.com', 'support@blazeverify.com', ...]
+blazeverify.batches.create(emails).then(function (response) {
+  console.log(response.id);
 });
 
 // you can optionally pass in a callback url that we'll POST to when the
 // batch is complete.
-blazeverify.batches.create(emails, 'https://blazeverify.com/'}).then(id => {
-  console.log(id);
+blazeverify.batches.create(emails, 'https://blazeverify.com/'}).then(function (response) {
+  console.log(response.id);
 });
 ```
 
@@ -81,8 +80,8 @@ blazeverify.batches.create(emails, 'https://blazeverify.com/'}).then(id => {
 Calling `status` on a batch will return the status. It will contain the results as well once complete. You can also `results` to get just the results.
 
 ```javascript
-id = '5cfcbfdeede34200693c4319'
-blazeverify.batches.status(id).then(response => {
+var id = '5cfcbfdeede34200693c4319'
+blazeverify.batches.status(id).then(function (response) {
   console.log(response);
 });
 ```
