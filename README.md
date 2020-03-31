@@ -25,12 +25,12 @@ yarn add blazeverify
 
 ## Usage
 
-The library needs to be configured with your account's API key which is available in your [Blaze Verify Dashboard](https://app.blazeverify.com/api). Require it with the keys value:
+The library needs to be configured with your account's API key which is available in your [Blaze Verify Dashboard](https://app.blazeverify.com/api). Require it with your API key:
 
 ### Setup
 
 ```javascript
-// set api key
+// require with api key
 var blazeverify = require('blazeverify')('live_...')
 ```
 
@@ -82,7 +82,8 @@ blazeverify.batches.create(emails, 'https://blazeverify.com/'}).then(function (r
 
 #### Get the status / results of a batch
 
-Calling `status` on a batch will return the status. It will contain the results as well once complete. You can also `results` to get just the results.
+Calling `batches.status` with the batch id will return the batch's status.
+This will also return the results once the batch is complete.
 
 ```javascript
 var id = '5cfcbfdeede34200693c4319'
