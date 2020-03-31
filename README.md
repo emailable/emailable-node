@@ -38,9 +38,13 @@ var blazeverify = require('blazeverify')('live_...')
 
 ```javascript
 // verify an email address
-blazeverify.verify('jarrett@blazeverify.com').then(function (response) {
-  console.log(response);
-});
+blazeverify.verify('jarrett@blazeverify.com')
+  .then(function (response) {
+    console.log(response);
+  })
+  .catch(function (error) {
+    console.log(error);
+  });
 ```
 
 #### Slow Email Server Handling
@@ -64,9 +68,10 @@ allocation within a 5 minute window.
 
 ```javascript
 var emails = ['jarrett@blazeverify.com', 'support@blazeverify.com', ...]
-blazeverify.batches.create(emails).then(function (response) {
-  console.log(response.id);
-});
+blazeverify.batches.create(emails)
+  .then(function (response) {
+    console.log(response.id);
+  });
 
 // you can optionally pass in a callback url that we'll POST to when the
 // batch is complete.
@@ -81,9 +86,10 @@ Calling `status` on a batch will return the status. It will contain the results 
 
 ```javascript
 var id = '5cfcbfdeede34200693c4319'
-blazeverify.batches.status(id).then(function (response) {
-  console.log(response);
-});
+blazeverify.batches.status(id)
+  .then(function (response) {
+    console.log(response);
+  });
 ```
 
 ## Development

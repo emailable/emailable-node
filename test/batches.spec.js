@@ -17,9 +17,7 @@ describe('blazeverify.batches.create()', () => {
 
 describe('blazeverify.batches.status()', () => {
 
-  it('should return the status of a batch', function (done) {
-    this.timeout(5000);
-
+  it('should return the status of a batch', done => {
     blazeverify.batches.verify(emails).then(response => {
       blazeverify.batches.status(response.id).then(response => {
         expect(response.emails).to.not.be.a('null');
