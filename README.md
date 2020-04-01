@@ -10,7 +10,7 @@ This is the official node wrapper for the Blaze Verify API.
 
 ## Documentation
 
-See the [Node API docs](https://blazeverify.com/docs/api#node).
+See the [Node API docs](https://blazeverify.com/docs/api/?javascript).
 
 ## Installation
 
