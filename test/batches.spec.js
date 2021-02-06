@@ -4,12 +4,12 @@ const expect = require('chai').expect;
 const blazeverify = require('../lib/blazeverify')('test_7aff7fc0142c65f86a00')
 const emails = ['deliverable@example.com', 'undeliverable@example.com']
 
-describe('blazeverify.batches.create()', () => {
+describe('blazeverify.batches.verify()', () => {
 
-	it('should create a new batch', done => {
+  it('should create a new batch', done => {
     blazeverify.batches.verify(emails).then(response => {
-    	expect(response.id).to.have.lengthOf(24);
-    	done();
+      expect(response.id).to.have.lengthOf(24);
+      done();
     });
   });
 
