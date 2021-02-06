@@ -67,14 +67,14 @@ allocation within a 5 minute window.
 
 ```javascript
 var emails = ['jarrett@blazeverify.com', 'support@blazeverify.com', ...]
-blazeverify.batches.create(emails)
+blazeverify.batches.verify(emails)
   .then(function (response) {
     console.log(response.id);
   });
 
 // you can optionally pass in a callback url that we'll POST to when the
 // batch is complete.
-blazeverify.batches.create(emails, 'https://blazeverify.com/'}).then(function (response) {
+blazeverify.batches.verify(emails, 'https://blazeverify.com/'}).then(function (response) {
   console.log(response.id);
 });
 ```
