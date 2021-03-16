@@ -1,43 +1,43 @@
-# Blaze Verify Node Library
+# Emailable Node Library
 
-[![Version](https://img.shields.io/npm/v/blazeverify.svg)](https://www.npmjs.org/package/blazeverify)
-[![Build Status](https://travis-ci.com/blazeverify/blazeverify-node.svg)](https://travis-ci.com/blazeverify/blazeverify-node)
-[![Maintainability](https://api.codeclimate.com/v1/badges/2d74c69a9155109058a7/maintainability)](https://codeclimate.com/github/blazeverify/blazeverify-node/maintainability)
-[![Downloads](https://img.shields.io/npm/dm/blazeverify.svg)](https://www.npmjs.com/package/blazeverify)
-[![Try on RunKit](https://badge.runkitcdn.com/blazeverify.svg)](https://runkit.com/npm/blazeverify)
+[![Version](https://img.shields.io/npm/v/emailable.svg)](https://www.npmjs.org/package/emailable)
+[![Build Status](https://travis-ci.com/emailable/emailable-node.svg)](https://travis-ci.com/emailable/emailable-node)
+[![Maintainability](https://api.codeclimate.com/v1/badges/2d74c69a9155109058a7/maintainability)](https://codeclimate.com/github/emailable/emailable-node/maintainability)
+[![Downloads](https://img.shields.io/npm/dm/emailable.svg)](https://www.npmjs.com/package/emailable)
+[![Try on RunKit](https://badge.runkitcdn.com/emailable.svg)](https://runkit.com/npm/emailable)
 
-This is the official node wrapper for the Blaze Verify API.
+This is the official node wrapper for the Emailable API.
 
 ## Documentation
 
-See the [Node API docs](https://blazeverify.com/docs/api/?javascript).
+See the [Node API docs](https://emailable.com/docs/api/?javascript).
 
 ## Installation
 
 Install the package with:
 
 ```sh
-npm install blazeverify --save
+npm install emailable --save
 # or
-yarn add blazeverify
+yarn add emailable
 ```
 
 ## Usage
 
-The library needs to be configured with your account's API key which is available in your [Blaze Verify Dashboard](https://app.blazeverify.com/api). Require it with your API key:
+The library needs to be configured with your account's API key which is available in your [Emailable Dashboard](https://app.emailable.com/api). Require it with your API key:
 
 ### Setup
 
 ```javascript
 // require with api key
-var blazeverify = require('blazeverify')('live_...')
+var emailable = require('emailable')('live_...')
 ```
 
 ### Verification
 
 ```javascript
 // verify an email address
-blazeverify.verify('jarrett@blazeverify.com')
+emailable.verify('jarrett@emailable.com')
   .then(function (response) {
     console.log(response);
   })
@@ -66,15 +66,15 @@ allocation within a 5 minute window.
 #### Start a batch
 
 ```javascript
-var emails = ['jarrett@blazeverify.com', 'support@blazeverify.com', ...]
-blazeverify.batches.verify(emails)
+var emails = ['jarrett@emailable.com', 'support@emailable.com', ...]
+emailable.batches.verify(emails)
   .then(function (response) {
     console.log(response.id);
   });
 
 // you can optionally pass in a callback url that we'll POST to when the
 // batch is complete.
-blazeverify.batches.verify(emails, 'https://blazeverify.com/'}).then(function (response) {
+emailable.batches.verify(emails, 'https://emailable.com/'}).then(function (response) {
   console.log(response.id);
 });
 ```
@@ -86,7 +86,7 @@ This will also return the results once the batch is complete.
 
 ```javascript
 var id = '5cfcbfdeede34200693c4319'
-blazeverify.batches.status(id)
+emailable.batches.status(id)
   .then(function (response) {
     console.log(response);
   });
@@ -111,4 +111,4 @@ $ yarn test test/verify.spec.js
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/blazeverify/blazeverify-node.
+Bug reports and pull requests are welcome on GitHub at https://github.com/emailable/emailable-node.
