@@ -8,8 +8,6 @@
 
 This is the official node wrapper for the Emailable API.
 
-Blaze Verify is now Emailable! Please switch to using the Emailable client library: https://emailable.com/docs/api?javascript
-
 ## Documentation
 
 See the [Node API docs](https://emailable.com/docs/api/?javascript).
