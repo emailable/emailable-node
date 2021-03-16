@@ -4,7 +4,8 @@
   "description": "Email Verification that’s astonishingly easy and low-cost. See https://blazeverify.com for details.",
   "main": "lib/blazeverify.js",
   "scripts": {
-    "test": "mocha --timeout 10000"
+    "test": "mocha --timeout 10000",
+    "postinstall": "node -e \"console.log('\\u001b[35m\\u001b[38;2;255;120;44mBlaze Verify\\u001b[22m\\u001b[39m is now \\u001b[35m\\u001b[38;2;126;97;255mEmailable!\\u001b[22m\\u001b[39m. Please switch to using the \\u001b[35m\\u001b[38;2;126;97;255mEmailable\\u001b[22m\\u001b[39m client library: \\u001b[34mhttps://emailable.com/docs/api?javascript\\u001b[0m')\""
   },
   "repository": {
     "type": "git",
