@@ -1,15 +1,14 @@
 {
-  "name": "blazeverify",
-  "version": "1.1.4",
-  "description": "Email Verification that’s astonishingly easy and low-cost. See https://blazeverify.com for details.",
-  "main": "lib/blazeverify.js",
+  "name": "emailable",
+  "version": "2.0.0",
+  "description": "Email Verification that’s astonishingly easy and low-cost. See https://emailable.com for details.",
+  "main": "lib/emailable.js",
   "scripts": {
-    "test": "mocha --timeout 10000",
-    "postinstall": "node -e \"console.log('\\u001b[35m\\u001b[38;2;255;120;44mBlaze Verify\\u001b[22m\\u001b[39m is now \\u001b[35m\\u001b[38;2;126;97;255mEmailable!\\u001b[22m\\u001b[39m. Please switch to using the \\u001b[35m\\u001b[38;2;126;97;255mEmailable\\u001b[22m\\u001b[39m client library: \\u001b[34mhttps://emailable.com/docs/api?javascript\\u001b[0m')\""
+    "test": "mocha --timeout 10000"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/blazeverify/blazeverify-node.git"
+    "url": "git://github.com/emailable/emailable-node.git"
   },
   "keywords": [
     "email verification",
@@ -18,15 +17,15 @@
     "validation",
     "email"
   ],
-  "author": "Blaze Verify <support@blazeverify.com",
+  "author": "Emailable <support@emailable.com",
   "contributors": [
-    "Jarrett Lusso <jarrett@blazeverify.com>"
+    "Jarrett Lusso <jarrett@emailable.com>"
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/blazeverify/blazeverify-node/issues"
+    "url": "https://github.com/emailable/emailable-node/issues"
   },
-  "homepage": "https://github.com/blazeverify/blazeverify-node#readme",
+  "homepage": "https://github.com/emailable/emailable-node#readme",
   "devDependencies": {
     "chai": "^4.2.0",
     "mocha": "^7.1.1"
