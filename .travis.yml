@@ -4,6 +4,8 @@ cache:
   directories:
     - node_modules
 node_js:
-  - '8'
-  - '10'
+  - '12'
+  - '14'
+  - '16'
+  - '17'
 sudo: false
