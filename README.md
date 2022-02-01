@@ -1,8 +1,8 @@
 # Emailable Node Library
 
 [![Version](https://img.shields.io/npm/v/emailable.svg)](https://www.npmjs.org/package/emailable)
-[![Build Status](https://travis-ci.com/emailable/emailable-node.svg)](https://travis-ci.com/emailable/emailable-node)
-[![Maintainability](https://api.codeclimate.com/v1/badges/2d74c69a9155109058a7/maintainability)](https://codeclimate.com/github/emailable/emailable-node/maintainability)
+[![Build Status](https://app.travis-ci.com/emailable/emailable-node.svg?branch=master)](https://app.travis-ci.com/github/emailable/emailable-node)
+[![Maintainability](https://api.codeclimate.com/v1/badges/e1f07e3080d7ed2ca09e/maintainability)](https://codeclimate.com/github/emailable/emailable-node/maintainability)
 [![Downloads](https://img.shields.io/npm/dm/emailable.svg)](https://www.npmjs.com/package/emailable)
 [![Try on RunKit](https://badge.runkitcdn.com/emailable.svg)](https://runkit.com/npm/emailable)
 
@@ -72,9 +72,9 @@ emailable.batches.verify(emails)
     console.log(response.id);
   });
 
-// you can optionally pass in a callback url that we'll POST to when the
+// you can optionally pass in options like a callback url that we'll POST to when the
 // batch is complete.
-emailable.batches.verify(emails, 'https://emailable.com/'}).then(function (response) {
+emailable.batches.verify(emails, { url: 'https://emailable.com/' }).then(function (response) {
   console.log(response.id);
 });
 ```

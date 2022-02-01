@@ -13,6 +13,13 @@ describe('emailable.batches.verify()', () => {
     });
   });
 
+  it('should return a payment error when passed { simulate: "payment_error" }', done => {
+    emailable.batches.verify(emails, { simulate: 'payment_error' }).catch(error => {
+      expect(error.code).to.be.equal(402)
+      done();
+    });
+  });
+
 });
 
 describe('emailable.batches.status()', () => {
@@ -20,10 +27,21 @@ describe('emailable.batches.status()', () => {
   it('should return the status of a batch', done => {
     emailable.batches.verify(emails).then(response => {
       emailable.batches.status(response.id).then(response => {
-        expect(response.emails).to.not.be.a('null');
-        expect(response.total_counts).to.not.be.a('null');
-        expect(response.reason_counts).to.not.be.a('null');
-        expect(response.message).to.not.be.a('null');
+        expect(response.emails).to.be.an('array');
+        expect(response.total_counts).to.be.a('object');
+        expect(response.reason_counts).to.be.a('object');
+        expect(response.message).to.be.a('string');
+        done();
+      });
+    });
+  });
+
+  it('should return verifying response when passed { simulate: "verifying" }', done => {
+    emailable.batches.verify(emails).then(response => {
+      emailable.batches.status(response.id, { simulate: 'verifying' }).then(response => {
+        expect(response.processed).to.be.a('number');
+        expect(response.total).to.be.a('number');
+        expect(response.message).to.be.a('string');
         done();
       });
     });

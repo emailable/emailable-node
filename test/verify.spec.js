@@ -7,13 +7,13 @@ describe('emailable.verify()', () => {
 
   it('should verify an email', done => {
     emailable.verify('deliverable@example.com').then(response => {
-      expect(response.domain).to.not.be.a('null');
-      expect(response.email).to.not.be.a('null');
-      expect(response.reason).to.not.be.a('null');
-      expect(response.score).to.not.be.a('null');
-      expect(response.state).to.not.be.a('null');
-      expect(response.user).to.not.be.a('null');
-      expect(response.duration).to.not.be.a('null');
+      expect(response.domain).to.be.a('string');
+      expect(response.email).to.be.a('string');
+      expect(response.reason).to.be.a('string');
+      expect(response.score).to.be.a('number');;
+      expect(response.state).to.be.a('string');
+      expect(response.user).to.be.a('string');
+      expect(response.duration).to.be.a('number');
       done();
     });
   });
