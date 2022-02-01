@@ -28,7 +28,7 @@
   "homepage": "https://github.com/emailable/emailable-node#readme",
   "devDependencies": {
     "chai": "^4.2.0",
-    "mocha": "^7.1.1"
+    "mocha": "^9.2.0"
   },
   "dependencies": {
     "@types/node": "^13.9.5",
