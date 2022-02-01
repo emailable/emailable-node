@@ -1,7 +1,7 @@
 {
   "name": "emailable",
   "version": "2.0.0",
-  "description": "Email Verification that’s astonishingly easy and low-cost. See https://emailable.com for details.",
+  "description": "Email Verification that's astonishingly easy and low-cost. See https://emailable.com for details.",
   "main": "lib/emailable.js",
   "scripts": {
     "test": "mocha --timeout 10000"
@@ -32,6 +32,6 @@
   },
   "dependencies": {
     "@types/node": "^13.9.5",
-    "axios": "^0.21.1"
+    "axios": "^0.25.0"
   }
 }

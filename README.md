@@ -72,9 +72,9 @@ emailable.batches.verify(emails)
     console.log(response.id);
   });
 
-// you can optionally pass in a callback url that we'll POST to when the
+// you can optionally pass in options like a callback url that we'll POST to when the
 // batch is complete.
-emailable.batches.verify(emails, 'https://emailable.com/'}).then(function (response) {
+emailable.batches.verify(emails, { url: 'https://emailable.com/' }).then(function (response) {
   console.log(response.id);
 });
 ```
