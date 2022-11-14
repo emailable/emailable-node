@@ -24,13 +24,19 @@ yarn add emailable
 
 ## Usage
 
-The library needs to be configured with your account's API key which is available in your [Emailable Dashboard](https://app.emailable.com/api). Require it with your API key:
+The library needs to be configured with your account's API key which is
+available in your [Emailable Dashboard](https://app.emailable.com/api). Require
+it with your API key:
 
 ### Setup
 
 ```javascript
-// require with api key
+// require with API key
 var emailable = require('emailable')('live_...')
+
+// ES6 import
+import Emailable from 'emailable';
+const emailable = Emailable('live_...');
 ```
 
 ### Verification
@@ -38,6 +44,22 @@ var emailable = require('emailable')('live_...')
 ```javascript
 // verify an email address
 emailable.verify('jarrett@emailable.com')
+  .then(function (response) {
+    console.log(response);
+  })
+  .catch(function (error) {
+    console.log(error);
+  });
+```
+
+#### Additional options
+
+You can also pass any of the additional
+[options](https://emailable.com/docs/api?javascript#verify-an-email)
+as a second parameter to `verify`.
+
+```javascript
+emailable.verify('jarrett@emailable.com', { timeout: 10 })
   .then(function (response) {
     console.log(response);
   })
@@ -57,7 +79,7 @@ allocation within a 5 minute window.
 
 ```javascript
 {
-    message: 'Your request is taking longer than normal. Please send your request again.'
+  message: 'Your request is taking longer than normal. Please send your request again.'
 }
 ```
 
@@ -71,12 +93,19 @@ emailable.batches.verify(emails)
   .then(function (response) {
     console.log(response.id);
   });
+```
 
-// you can optionally pass in options like a callback url that we'll POST to when the
-// batch is complete.
-emailable.batches.verify(emails, { url: 'https://emailable.com/' }).then(function (response) {
-  console.log(response.id);
-});
+##### Additional options
+
+You can also pass any of the additional
+[options](https://emailable.com/docs/api?javascript#verify-a-batch-of-emails)
+as a second parameter to `verify`.
+
+```javascript
+emailable.batches.verify(emails, { url: 'https://emailable.com/' }).
+  then(function (response) {
+    console.log(response.id);
+  });
 ```
 
 #### Get the status / results of a batch
@@ -101,7 +130,8 @@ $ yarn install
 $ yarn test
 ```
 
-If you do not have `yarn` installed, you can get it with `npm install --global yarn`.
+If you do not have `yarn` installed, you can get it with `npm install --global
+yarn`.
 
 Run a single test suite without a coverage report:
 
@@ -111,4 +141,5 @@ $ yarn test test/verify.spec.js
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/emailable/emailable-node.
+Bug reports and pull requests are welcome on GitHub at
+https://github.com/emailable/emailable-node.
