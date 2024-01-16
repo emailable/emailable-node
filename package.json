@@ -3,8 +3,12 @@
   "version": "3.0.4",
   "description": "Email Verification that's astonishingly easy and low-cost. See https://emailable.com for details.",
   "main": "lib/emailable.js",
+  "types": "lib/emailable.d.ts",
   "scripts": {
-    "test": "mocha --timeout 10000"
+    "test": "mocha --timeout 10000 && tsd"
+  },
+  "tsd": {
+    "directory": "test"
   },
   "repository": {
     "type": "git",
@@ -28,7 +32,8 @@
   "homepage": "https://github.com/emailable/emailable-node#readme",
   "devDependencies": {
     "chai": "^4.2.0",
-    "mocha": "^9.2.0"
+    "mocha": "^9.2.0",
+    "tsd": "^0.30.3"
   },
   "dependencies": {
     "axios": "^1.6.0"
