@@ -13,9 +13,16 @@ describe('emailable.account()', () => {
     });
   });
 
-  it('should return a 401 status code when an invalid API key', done => {
+  it('should return a 401 status code when no API key', done => {
     require('../lib/emailable')().account().catch(error => {
       expect(error.code).to.be.equal(401);
+      done();
+    });
+  });
+
+  it('should return a 403 status code when an invalid API key', done => {
+    require('../lib/emailable')('test_xxxxxxxxxx').account().catch(error => {
+      expect(error.code).to.be.equal(403);
       done();
     });
   });
