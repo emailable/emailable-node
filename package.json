@@ -1,6 +1,6 @@
 {
   "name": "emailable",
-  "version": "3.0.5",
+  "version": "3.0.6",
   "description": "Email Verification that's astonishingly easy and low-cost. See https://emailable.com for details.",
   "main": "lib/emailable.js",
   "types": "lib/emailable.d.ts",
