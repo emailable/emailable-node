@@ -1,27 +1,27 @@
 export class Client {
-  constructor(key: string);
+  constructor(key: string)
 
-  makeGetRequest(endpoint: string, params?: object): Promise<any>;
+  makeGetRequest(endpoint: string, params?: object): Promise<any>
 
-  makePostRequest(endpoint: string, data?: object): Promise<any>;
+  makePostRequest(endpoint: string, data?: object): Promise<any>
 }
 
 export class Batches {
-  constructor(client: Client);
+  constructor(client: Client)
 
-  verify(emails: string[], options?: object): Promise<any>;
+  verify(emails: string[], options?: object): Promise<any>
 
-  status(id: string, options?: object): Promise<any>;
+  status(id: string, options?: object): Promise<any>
 }
 
 export class Emailable {
-  constructor(apiKey: string);
+  constructor(apiKey: string)
 
-  verify(email: string, options?: object): Promise<any>;
+  verify(email: string, options?: object): Promise<any>
 
-  account(): Promise<any>;
+  account(): Promise<any>
 
-  readonly batches: Batches;
+  readonly batches: Batches
 }
 
-export default Emailable;
+export default Emailable
