@@ -1,27 +1,13 @@
-export class Client {
-  constructor(key: string);
+import Client = require("./client");
+import Batches = require("./batches");
 
-  makeGetRequest(endpoint: string, params?: object): Promise<any>;
-
-  makePostRequest(endpoint: string, data?: object): Promise<any>;
-}
-
-export class Batches {
-  constructor(client: Client);
-
-  verify(emails: string[], options?: object): Promise<any>;
-
-  status(id: string, options?: object): Promise<any>;
-}
-
-export class Emailable {
+declare class Emailable {
   constructor(apiKey: string);
-
-  verify(email: string, options?: object): Promise<any>;
-
+  client: Client;
+  batches: Batches;
+  verify(email: any, options?: {}): Promise<any>;
   account(): Promise<any>;
-
-  readonly batches: Batches;
 }
 
-export default Emailable;
+declare function _exports(apiKey: any): Emailable;
+export = _exports;
