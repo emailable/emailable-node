@@ -5,9 +5,9 @@ declare class Emailable {
   constructor(apiKey: string);
   client: Client;
   batches: Batches;
-  verify(email: any, options?: {}): Promise<any>;
+  verify(email: string, options?: {}): Promise<any>;
   account(): Promise<any>;
 }
 
-declare function _exports(apiKey: any): Emailable;
+declare function _exports(apiKey: string): Emailable;
 export = _exports;

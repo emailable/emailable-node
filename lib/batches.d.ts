@@ -3,8 +3,8 @@ import Client from './client';
 declare class Batches {
   constructor(client: Client);
   client: Client;
-  verify(emails: any, options?: {}): Promise<any>;
-  status(id: any, options?: {}): Promise<any>;
+  verify(emails: string[], options?: {}): Promise<any>;
+  status(id: string, options?: {}): Promise<any>;
 }
 
 export = Batches;
