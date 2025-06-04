@@ -10,7 +10,7 @@ describe('emailable.batches.verify()', () => {
     emailable.batches.verify(emails).then(response => {
       expect(response.id).to.have.lengthOf(24)
       done()
-    })
+    }).catch(done)
   })
 
   it('should return a payment error when passed { simulate: "payment_error" }', done => {
@@ -32,8 +32,8 @@ describe('emailable.batches.status()', () => {
         expect(response.reason_counts).to.be.a('object')
         expect(response.message).to.be.a('string')
         done()
-      })
-    })
+      }).catch(done)
+    }).catch(done)
   })
 
   it('should return verifying response when passed { simulate: "verifying" }', done => {
@@ -43,8 +43,8 @@ describe('emailable.batches.status()', () => {
         expect(response.total).to.be.a('number')
         expect(response.message).to.be.a('string')
         done()
-      })
-    })
+      }).catch(done)
+    }).catch(done)
   })
 
 })

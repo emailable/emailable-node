@@ -24,19 +24,31 @@ yarn add emailable
 
 ## Usage
 
-The library needs to be configured with your account's API key which is
-available in your [Emailable Dashboard](https://app.emailable.com/api). Require
-it with your API key:
+### Authentication
 
-### Setup
+The Emailable API requires either an API key or an access token for
+authentication. API keys can be created and managed in the
+[Emailable Dashboard](https://app.emailable.com/api).
+
+An API key can be set globally for the Emailable client:
 
 ```javascript
 // require with API key
-var emailable = require('emailable')('live_...')
+var emailable = require('emailable')('your_api_key')
 
 // ES6 import
 import Emailable from 'emailable';
-const emailable = Emailable('live_...');
+const emailable = Emailable('your_api_key');
+```
+
+Or, you can specify an `apiKey` or an `accessToken` with each request:
+
+```javascript
+// set api_key at request time
+emailable.verify({ apiKey: 'your_api_key' })
+
+// set access_token at request time
+emailable.verify({ accessToken: 'your_api_key' })
 ```
 
 ### Verification
