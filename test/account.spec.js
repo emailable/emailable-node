@@ -10,7 +10,7 @@ describe('emailable.account()', () => {
       expect(response.owner_email).to.be.a('string')
       expect(response.available_credits).to.be.a('number')
       done()
-    })
+    }).catch(done)
   })
 
   it('should return a 401 status code when no API key', done => {

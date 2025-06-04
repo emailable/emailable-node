@@ -19,11 +19,11 @@ declare class Emailable {
 
   verify(email: string, options?: {}): Promise<any>
 
-  account(): Promise<any>
+  account(options?: {}): Promise<any>
 
   readonly client: Client
   readonly batches: Batches
 }
 
-declare function _exports(apiKey: any): Emailable
+declare function _exports(apiKey?: any): Emailable
 export = _exports

@@ -5,7 +5,8 @@
   "main": "lib/emailable.js",
   "types": "lib/emailable.d.ts",
   "scripts": {
-    "test": "mocha --timeout 10000 && tsd",
+    "test": "mocha --timeout 10000",
+    "test:types": "tsd",
     "lint": "eslint"
   },
   "tsd": {
@@ -40,5 +41,6 @@
   },
   "dependencies": {
     "axios": "^1.6.0"
-  }
+  },
+  "packageManager": "yarn@1.22.21+sha1.1959a18351b811cdeedbd484a8f86c3cc3bbaf72"
 }

@@ -15,7 +15,7 @@ describe('emailable.verify()', () => {
       expect(response.user).to.be.a('string')
       expect(response.duration).to.be.a('number')
       done()
-    })
+    }).catch(done)
   })
 
   it('should return a valid state', done => {
@@ -23,7 +23,7 @@ describe('emailable.verify()', () => {
     emailable.verify('deliverable@example.com').then(response => {
       expect(states.includes(response.state)).to.be.equal(true)
       done()
-    })
+    }).catch(done)
   })
 
   it('should verify an email with accept-all enabled', done => {
@@ -32,6 +32,7 @@ describe('emailable.verify()', () => {
         expect(response.accept_all).to.be.equal(true)
         done()
       })
+      .catch(done)
   })
 
 })

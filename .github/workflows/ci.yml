@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [18.x, 20.x]
+        node-version: [18.x, 20.x, 22.x, 23.x, 24.x]
       fail-fast: false
     steps:
       - uses: actions/checkout@v4
@@ -28,6 +28,9 @@ jobs:
 
       - name: Run tests
         run: yarn test
+
+      - name: Run type definition tests
+        run: yarn test:types
 
   linters:
     name: Linters
