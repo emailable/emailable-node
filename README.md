@@ -2,9 +2,7 @@
 
 [![Version](https://img.shields.io/npm/v/emailable.svg)](https://www.npmjs.org/package/emailable)
 ![Build Status](https://github.com/emailable/emailable-node/actions/workflows/ci.yml/badge.svg)
-[![Maintainability](https://api.codeclimate.com/v1/badges/e1f07e3080d7ed2ca09e/maintainability)](https://codeclimate.com/github/emailable/emailable-node/maintainability)
 [![Downloads](https://img.shields.io/npm/dm/emailable.svg)](https://www.npmjs.com/package/emailable)
-[![Try on RunKit](https://badge.runkitcdn.com/emailable.svg)](https://runkit.com/npm/emailable)
 
 This is the official node wrapper for the Emailable API.
 
@@ -18,6 +16,8 @@ Install the package with:
 
 ```sh
 npm install emailable --save
+# or
+pnpm add emailable
 # or
 yarn add emailable
 ```
@@ -138,17 +138,14 @@ emailable.batches.status(id)
 Run all tests:
 
 ```sh
-$ yarn install
-$ yarn test
+$ pnpm install
+$ pnpm test
 ```
-
-If you do not have `yarn` installed, you can get it with `npm install --global
-yarn`.
 
 Run a single test suite without a coverage report:
 
 ```sh
-$ yarn test test/verify.spec.js
+$ pnpm test test/verify.spec.js
 ```
 
 ## Contributing
