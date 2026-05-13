@@ -33,7 +33,7 @@ authentication. API keys can be created and managed in the
 An API key can be set globally for the Emailable client:
 
 ```javascript
-// Global: Common JS import
+// Global: CommonJS import
 const emailable = require('emailable')('YOUR_API_KEY');
 
 // Global: ES6 import
