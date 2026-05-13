@@ -8,7 +8,7 @@ This is the official node wrapper for the Emailable API.
 
 ## Documentation
 
-See the [Node API docs](https://emailable.com/docs/api/?javascript).
+See the [Node API docs](https://emailable.com/docs/api/emails/?code_language=javascript).
 
 ## Installation
 
@@ -33,22 +33,22 @@ authentication. API keys can be created and managed in the
 An API key can be set globally for the Emailable client:
 
 ```javascript
-// require with API key
-var emailable = require('emailable')('your_api_key')
+// Global: Common JS import
+const emailable = require('emailable')('YOUR_API_KEY');
 
-// ES6 import
+// Global: ES6 import
 import Emailable from 'emailable';
-const emailable = Emailable('your_api_key');
+const emailable = Emailable('YOUR_API_KEY');
 ```
 
 Or, you can specify an `apiKey` or an `accessToken` with each request:
 
 ```javascript
 // set api_key at request time
-emailable.verify({ apiKey: 'your_api_key' })
+emailable.verify({ apiKey: 'YOUR_API_KEY' })
 
 // set access_token at request time
-emailable.verify({ accessToken: 'your_api_key' })
+emailable.verify({ accessToken: 'YOUR_API_KEY' })
 ```
 
 ### Verification
@@ -56,10 +56,10 @@ emailable.verify({ accessToken: 'your_api_key' })
 ```javascript
 // verify an email address
 emailable.verify('jarrett@emailable.com')
-  .then(function (response) {
+  .then((response) => {
     console.log(response);
   })
-  .catch(function (error) {
+  .catch((error) => {
     console.log(error);
   });
 ```
@@ -67,15 +67,15 @@ emailable.verify('jarrett@emailable.com')
 #### Additional options
 
 You can also pass any of the additional
-[options](https://emailable.com/docs/api?javascript#verify-an-email)
+[options](https://emailable.com/docs/api/emails/?code_language=javascript#verify-an-email)
 as a second parameter to `verify`.
 
 ```javascript
 emailable.verify('jarrett@emailable.com', { timeout: 10 })
-  .then(function (response) {
+  .then((response) => {
     console.log(response);
   })
-  .catch(function (error) {
+  .catch((error) => {
     console.log(error);
   });
 ```
@@ -100,9 +100,10 @@ allocation within a 5 minute window.
 #### Start a batch
 
 ```javascript
-var emails = ['jarrett@emailable.com', 'support@emailable.com', ...]
+const emails = ['jarrett@emailable.com', 'support@emailable.com', ...];
+
 emailable.batches.verify(emails)
-  .then(function (response) {
+  .then((response) => {
     console.log(response.id);
   });
 ```
@@ -110,12 +111,12 @@ emailable.batches.verify(emails)
 ##### Additional options
 
 You can also pass any of the additional
-[options](https://emailable.com/docs/api?javascript#verify-a-batch-of-emails)
+[options](https://emailable.com/docs/api/emails/?code_language=javascript#verify-a-batch-of-emails)
 as a second parameter to `verify`.
 
 ```javascript
-emailable.batches.verify(emails, { url: 'https://emailable.com/' }).
-  then(function (response) {
+emailable.batches.verify(emails, { url: 'https://emailable.com/' })
+  .then((response) => {
     console.log(response.id);
   });
 ```
@@ -126,9 +127,10 @@ Calling `batches.status` with the batch id will return the batch's status.
 This will also return the results once the batch is complete.
 
 ```javascript
-var id = '5cfcbfdeede34200693c4319'
+const id = '5cfcbfdeede34200693c4319';
+
 emailable.batches.status(id)
-  .then(function (response) {
+  .then((response) => {
     console.log(response);
   });
 ```
