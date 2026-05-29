@@ -12,6 +12,16 @@
   "tsd": {
     "directory": "test"
   },
+  "pnpm": {
+    "overrides": {
+      "brace-expansion@>=2.0.0 <2.0.3": ">=2.0.3",
+      "brace-expansion@>=5.0.0 <5.0.6": ">=5.0.6",
+      "diff@>=6.0.0 <8.0.3": ">=8.0.3",
+      "picomatch@<2.3.2": ">=2.3.2",
+      "serialize-javascript@<=7.0.2": ">=7.0.3",
+      "serialize-javascript@>=5.0.0 <7.0.5": ">=7.0.5"
+    }
+  },
   "repository": {
     "type": "git",
     "url": "git://github.com/emailable/emailable-node.git"
