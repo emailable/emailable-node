@@ -7,7 +7,8 @@
   "scripts": {
     "test": "mocha --timeout 10000",
     "test:types": "tsd",
-    "lint": "eslint"
+    "lint": "eslint",
+    "preversion": "[ \"$(git branch --show-current)\" = master ] || { echo \"error: release from master\"; exit 1; }; git fetch -q origin master && [ \"$(git rev-parse HEAD)\" = \"$(git rev-parse origin/master)\" ] || { echo \"error: master is not in sync with origin\"; exit 1; }; pnpm test && pnpm test:types && pnpm lint"
   },
   "tsd": {
     "directory": "test"
