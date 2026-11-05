@@ -150,6 +150,14 @@ Run a single test suite without a coverage report:
 $ pnpm test test/verify.spec.js
 ```
 
+## Cutting a Release
+
+Run `pnpm version x.y.z` (or `patch`, `minor`, `major`) on an up to date
+`master` with a clean tree, then `git push --follow-tags`. It runs the tests
+and linter, bumps `package.json`, commits, and tags `x.y.z`. Pushing the tag
+triggers the release workflow, which publishes to npm and creates the GitHub
+release.
+
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at
